@@ -107,6 +107,16 @@ def obtener_productos(
 
     return productos
 
+@app.get("/productos/disponibles")
+def obtener_productos_disponibles(
+    db: Session = Depends(get_db)
+):
+    productos = db.query(Producto).filter(
+        Producto.stock > 0
+    ).all()
+
+    return productos
+
 
 @app.get("/productos/{producto_id}")
 def obtener_producto(
