@@ -1,7 +1,7 @@
-from repositories import materia_repository
-from repositories import producto_repository
+from models.materia import Materia
+from models.producto import Producto
 
 __all__ = [
-    "materia_repository",
-    "producto_repository"
+    "Materia",
+    "Producto"
 ]
