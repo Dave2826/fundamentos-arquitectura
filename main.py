@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 
+from routers import materias
 from routers import productos
 
 
@@ -52,3 +53,4 @@ def obtener_sistema():
 
 
 app.include_router(productos.router)
+app.include_router(materias.router)
